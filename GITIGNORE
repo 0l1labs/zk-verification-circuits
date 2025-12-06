@@ -45,27 +45,30 @@ pnpm-lock.yaml
 .idea/
 
 # ==========================================
-# Rust / Solana / Anchor
+# Solidity / Hardhat / Foundry
 # ==========================================
 
-# Rust build artifacts
-/target
-**/*.rs.bk
-Cargo.lock
+# Hardhat
+cache/
+artifacts/
+typechain/
+typechain-types/
 
-# Anchor
-.anchor
-.DS_Store
-target/
-**/*.rs.bk
-node_modules
-test-ledger/
-.yarn
+# Foundry
+out/
+cache_forge/
+broadcast/
 
-# Solana
-.solana/
-test-ledger/
-.solana-keygen/
+# Solidity coverage
+coverage/
+coverage.json
+
+# Compilation artifacts
+*.abi
+*.bin
+
+# Deployment artifacts
+deployments/*/solcInputs
 
 # ==========================================
 # Zero-Knowledge Circuits (Circom)
@@ -307,7 +310,6 @@ docker-compose.override.yml
 # Uncomment these if you want to commit lock files
 # package-lock.json
 # yarn.lock
-# Cargo.lock
 
 # ==========================================
 # Custom 0L1 Labs Specific
@@ -320,5 +322,5 @@ ceremonies/
 # Generated proofs (testing)
 proofs/test_*
 # Local blockchain data
-.solana-local/
-validator-data/
+.hardhat/
+.foundry/
