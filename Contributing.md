@@ -6,7 +6,7 @@ Thank you for your interest in contributing to 0L1 Labs! We're building the digi
 
 ### 1. Code Contributions
 - **Circuit Development:** Improvements to our ZK circuits (Circom)
-- **Smart Contracts:** Enhancements to Solana verifier contracts (Rust)
+- **Smart Contracts:** Enhancements to Base verifier contracts (Solidity)
 - **Frontend:** UI/UX improvements to proof generation interface
 - **Documentation:** Technical docs, tutorials, examples
 
@@ -35,7 +35,7 @@ cd 0L1-Labs
 
 # Install dependencies (instructions coming soon)
 # npm install (for frontend)
-# cargo build (for Rust contracts)
+# npm install (for Rust contracts)
 ```
 
 ---
@@ -55,7 +55,7 @@ cd 0L1-Labs
 - Add comprehensive comments
 - Include test cases
 
-**Smart Contracts (Rust/Anchor):**
+**Smart Contracts (Solidity):**
 - Follow Anchor framework best practices
 - Write unit tests for all functions
 - Document security considerations
