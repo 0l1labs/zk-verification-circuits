@@ -48,7 +48,7 @@ The following components are in scope for vulnerability reporting:
 
 **Core Infrastructure:**
 - Zero-knowledge circuits (Circom code)
-- Solana smart contracts (Rust/Anchor)
+- Base smart contracts (Solidity)
 - Frontend proof generation (JavaScript/React)
 - API endpoints (when launched Q2 2026)
 
@@ -152,7 +152,7 @@ To be eligible for a bounty:
 | Component | Version | Supported | Status |
 |-----------|---------|-----------|--------|
 | ZK Circuits | v1.0 | ✅ Yes | In Development (Q1 2026) |
-| Solana Contracts | v1.0 | ✅ Yes | In Development (Q1 2026) |
+| Smart Contracts | v1.0 | ✅ Yes | In Development (Q1 2026) |
 | Frontend | v1.0 | ✅ Yes | In Development (Q1 2026) |
 | API | N/A | ⏳ Coming | Launch Q2 2026 |
 
