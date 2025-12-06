@@ -14,7 +14,7 @@
 
 ### Core Innovation
 
-**Action-specific verification** powered by customized Semaphore Protocol circuits deployed on Solana for low-cost, high-throughput proof validation.
+**Action-specific verification** powered by customized Semaphore Protocol circuits deployed on Base for low-cost, high-throughput proof validation with Ethereum ecosystem credibility.
 
 **Key Differentiators:**
 * ✅ Action-specific verification (not permanent identity)
@@ -122,7 +122,7 @@ When you purchase a Genesis badge, you own:
 * Similar to infrastructure nodes in any network (more usage = more revenue)
 
 **Transferable Asset:**
-* Sell on Magic Eden, Tensor, or any Solana NFT marketplace
+* Sell on Blur, OpenSea, or any EVM-compatible NFT marketplace
 * Liquid market for infrastructure ownership
 * Exit anytime at market price
 
@@ -166,23 +166,23 @@ When you purchase a Genesis badge, you own:
 * Removes Merkle tree membership requirement
 * Focuses on uniqueness validation
 
-**Deployment:** Solana
+**Deployment:** Base (Ethereum L2)
 * Sub-second verification times
-* ~$0.0001-$0.001 gas fees
-* 65,000 TPS capacity
-* Production-grade performance
+* ~$0.01-$0.50 gas fees (vs $20-100 on Ethereum mainnet)
+* Ethereum ecosystem credibility and security
+* Production-grade performance with institutional backing
 
 ### Genesis Channel Smart Contract
 
 **Channel Registration:**
-```rust
-pub struct GenesisChannel {
-    pub channel_id: u16,           // 1-1000
-    pub owner: Pubkey,              // NFT holder's wallet
-    pub tier: u8,                   // 1=Platinum, 2=Titanium, 3=Obsidian
-    pub total_verifications: u64,   // Lifetime verification count
-    pub total_earned: u64,          // Lifetime earnings in lamports
-    pub active: bool,               // Processing status
+```solidity
+struct GenesisChannel {
+    uint16 channelId;              // 1-1000
+    address owner;                  // NFT holder's wallet
+    uint8 tier;                     // 1=Platinum, 2=Titanium, 3=Obsidian
+    uint64 totalVerifications;      // Lifetime verification count
+    uint256 totalEarned;            // Lifetime earnings in wei
+    bool active;                    // Processing status
 }
 ```
 
@@ -196,7 +196,7 @@ pub struct GenesisChannel {
 * 70% to channel owner (instant, automatic)
 * 30% to 0L1 Labs protocol operations
 * Real-time settlement to owner wallets
-* Gas fees: ~$0.0001 per payment (Solana)
+* Gas fees: ~$0.01-$0.50 per payment (Base L2)
 * Non-custodial (you control your funds)
 
 ### How Verifications Work
@@ -222,16 +222,13 @@ pub struct GenesisChannel {
 |---|---|---|
 | **Genesis Layer Launch** | December 2025 | 1,000 Genesis badges available • Founding community established • Development funded |
 | **Circuit Development** | Q1 2026 (Weeks 1-4) | Custom Semaphore circuits • Testing & optimization |
-| **Solana Contracts** | Q1 2026 (Weeks 5-6) | Rust verifier deployed • Genesis Channel routing • Fee distribution |
+| **Smart Contracts** | Q1 2026 (Weeks 5-6) | Solidity verifier deployed • Genesis Channel routing • Fee distribution |
 | **Dashboard Development** | Q1 2026 (Weeks 7-8) | Badge holder dashboard • Real-time earnings tracking • Withdrawal interface |
 | **Integration & QA** | Q1 2026 (Weeks 9-10) | End-to-end testing • Performance benchmarking |
-| **Security Audits** | Q1 2026 (Weeks 11-12) | Circuit & contract audits • Bug bounty program |
-| **Platform Launch** | March 2026 | **Infrastructure goes live** • First verifications processed • Badge holders start earning |
-| **Token Launch** | March-April 2026 | Separate $0L1 token launch for governance/ecosystem (see disclaimer) |
-| **API Public Release** | Q2 2026 | Public API for developers • SDK libraries • Documentation |
-| **Affiliate Verification** | Q2 2026 | Affiliate marketing API • Anti-bot verification |
-| **Wellness Proofs** | Q2-Q3 2026 | Enterprise partnerships • Corporate wellness programs |
-| **Multi-Vertical Expansion** | Q3-Q4 2026 | Credentials • AI compliance • Education verification |
+| **Security Audits** | Q1 2026 (Weeks 11-12) | Circuit audit • Smart contract audit • Penetration testing |
+| **Platform Launch** | March 2026 | Deploy to Base mainnet • Badge holders start earning • First live verifications |
+| **Public API** | Q2 2026 | Developer access • Integration docs • Customer onboarding |
+| **Multi-Vertical** | Q2-Q4 2026 | Affiliates • Wellness • Credentials • AI compliance |
 
 ---
 
@@ -273,7 +270,7 @@ pub struct GenesisChannel {
 * **500K+** verified humans
 * **99.9%+** API uptime
 * **<5 seconds** proof generation time
-* **<$0.001** verification cost
+* **<$0.50** verification cost (gas included)
 * **1,000** active Genesis Channels earning
 
 ### Business Metrics (End of 2026)
@@ -297,7 +294,7 @@ pub struct GenesisChannel {
 * Independent audits scheduled Q1 2026
 
 **Smart Contract Security:**
-* Anchor framework (Solana battle-tested)
+* Solidity best practices (EVM battle-tested)
 * Formal verification of critical functions
 * Multi-sig admin controls (3-of-5)
 * Time-locked upgrades (48-hour delay)
@@ -318,7 +315,7 @@ pub struct GenesisChannel {
 
 **Audits:**
 * Circuit audit (Q1 2026): Trail of Bits or equivalent
-* Smart contract audit (Q1 2026): Neodyme, OtterSec, or equivalent
+* Smart contract audit (Q1 2026): OpenZeppelin, Consensys Diligence, or equivalent
 * Bug bounty program (Q2 2026): $50K-$100K pool
 
 ---
@@ -335,7 +332,7 @@ pub struct GenesisChannel {
 ### External Resources
 * [Semaphore Protocol Documentation](https://semaphore.pse.dev/)
 * [Circom Documentation](https://docs.circom.io/)
-* [Solana Anchor Framework](https://www.anchor-lang.com/)
+* [Base Network Documentation](https://docs.base.org/)
 
 ---
 
@@ -354,7 +351,7 @@ We welcome contributions! This project is built on open-source principles:
 
 **Open Source:**
 * All circuit code (Circom)
-* Solana verifier contracts (Rust)
+* Base verifier contracts (Solidity)
 * Frontend proof generation library (JavaScript)
 * Genesis Channel smart contracts
 * Documentation and examples
